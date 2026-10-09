@@ -1,0 +1,358 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+#rohit-jain-portfolio,#rohit-jain-portfolio *,#rohit-jain-portfolio *::before,#rohit-jain-portfolio *::after{box-sizing:border-box}
+#rohit-jain-portfolio{--ivory:#F6F0E7;--sand:#D6CEC3;--mute:#AFA69B;--gold:#C9A45C;--gold2:#E0B86A;--wine:#8E2430;--wine2:#5D1721;--bg:#0c0b0b;--bg2:#11100f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Manrope',system-ui,sans-serif;position:relative;display:block;width:100%;max-width:100%;background:var(--bg);color:var(--sand);font-family:var(--sans);font-size:17px;line-height:1.7;overflow-x:clip;isolation:isolate}
+#rohit-jain-portfolio img{display:block;width:100%;max-width:100%;height:100%;object-fit:cover}
+#rohit-jain-portfolio h1,#rohit-jain-portfolio h2,#rohit-jain-portfolio h3,#rohit-jain-portfolio h4{font-family:var(--serif);color:var(--ivory)!important;-webkit-text-fill-color:currentColor;font-weight:600;line-height:1.05;margin:0 0 .5em;letter-spacing:0;text-transform:none}
+#rohit-jain-portfolio p{color:var(--sand)!important;margin:0 0 1.1em;font-size:1rem}
+#rohit-jain-portfolio strong{color:var(--ivory)!important}
+#rohit-jain-portfolio em{color:var(--gold2)!important}
+#rohit-jain-portfolio a{text-decoration:none;color:var(--gold2)}
+#rohit-jain-portfolio ul{list-style:none;margin:0;padding:0}
+#rohit-jain-portfolio :focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+#rohit-jain-portfolio section{position:relative;padding:clamp(64px,10vw,130px) clamp(20px,5vw,72px);scroll-margin-top:72px}
+#rohit-jain-portfolio .in{max-width:1280px;margin:0 auto;min-width:0}
+#rohit-jain-portfolio .h2{font-size:clamp(2.2rem,6vw,4.6rem);color:var(--ivory)!important}
+#rohit-jain-portfolio .lbl{display:block;color:var(--gold)!important;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:1rem;font-weight:600}
+#rohit-jain-portfolio .rule{height:1px;width:90px;background:linear-gradient(90deg,var(--gold),transparent);margin:0 0 1.6rem}
+.rjp-fullwidth-host{width:100%!important;max-width:none!important;min-width:0!important;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;--container-max-width:100%!important;--content-width:100%!important;--padding-left:0px;--padding-right:0px;--margin-left:0px;--margin-right:0px}
+/* nav */
+#rohit-jain-portfolio .nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(20px,5vw,72px);background:rgba(8,8,8,.88);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,164,92,.18)}
+#rohit-jain-portfolio .brand{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--ivory)!important;letter-spacing:.08em}
+#rohit-jain-portfolio .menu{display:flex;gap:28px}
+#rohit-jain-portfolio .menu a{color:var(--sand)!important;font-size:.85rem;letter-spacing:.08em;position:relative;padding:4px 0}
+#rohit-jain-portfolio .menu a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .3s}
+#rohit-jain-portfolio .menu a:hover::after,#rohit-jain-portfolio .menu a.on::after{width:100%}
+#rohit-jain-portfolio .burger{display:none;background:none;border:1px solid rgba(201,164,92,.5);width:44px;height:44px;cursor:pointer;padding:0;color:var(--gold2)}
+#rohit-jain-portfolio .burger span,#rohit-jain-portfolio .burger span::before,#rohit-jain-portfolio .burger span::after{display:block;width:20px;height:1.5px;background:var(--gold2);margin:0 auto;position:relative;transition:.3s}
+#rohit-jain-portfolio .burger span::before,#rohit-jain-portfolio .burger span::after{content:"";position:absolute;left:0}
+#rohit-jain-portfolio .burger span::before{top:-6px}#rohit-jain-portfolio .burger span::after{top:6px}
+#rohit-jain-portfolio .burger[aria-expanded=true] span{background:transparent}
+#rohit-jain-portfolio .burger[aria-expanded=true] span::before{top:0;transform:rotate(45deg)}
+#rohit-jain-portfolio .burger[aria-expanded=true] span::after{top:0;transform:rotate(-45deg)}
+/* buttons */
+#rohit-jain-portfolio .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 30px;font-weight:600;font-size:.92rem;letter-spacing:.06em;border:1px solid var(--gold);transition:.3s;max-width:100%;text-align:center}
+#rohit-jain-portfolio .btn.p{background:var(--gold);color:#120d08!important}
+#rohit-jain-portfolio .btn.p:hover{background:var(--gold2)}
+#rohit-jain-portfolio .btn.s{color:var(--ivory)!important;background:transparent}
+#rohit-jain-portfolio .btn.s:hover{background:rgba(201,164,92,.14)}
+#rohit-jain-portfolio .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:2rem}
+/* hero */
+#rohit-jain-portfolio .hero{min-height:calc(100vh - 72px);padding-top:clamp(40px,6vw,80px);padding-bottom:60px;display:flex;align-items:center;background:radial-gradient(ellipse 60% 70% at 72% 40%,rgba(201,164,92,.16),transparent 70%),radial-gradient(ellipse 40% 50% at 8% 100%,rgba(142,36,48,.28),transparent 70%),#080808;overflow:hidden}
+#rohit-jain-portfolio .hero .in{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,4vw,64px);align-items:center;width:100%}
+#rohit-jain-portfolio .hero h1{font-size:clamp(3.6rem,13vw,10rem);line-height:.86;letter-spacing:-.01em;margin:0 0 .25em}
+#rohit-jain-portfolio .hero h1 span{display:block}
+#rohit-jain-portfolio .hero h1 span+span{color:var(--gold2)!important;font-style:italic;padding-left:.35em}
+#rohit-jain-portfolio .roles{font-size:clamp(.95rem,2vw,1.2rem);color:var(--ivory)!important;letter-spacing:.14em;margin-bottom:1rem}
+#rohit-jain-portfolio .tag{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.8rem);font-style:italic;color:var(--sand)!important;max-width:30ch;line-height:1.3}
+#rohit-jain-portfolio .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.8rem}
+#rohit-jain-portfolio .chips li{border:1px solid rgba(201,164,92,.45);padding:6px 12px;font-size:.78rem;color:var(--ivory);background:rgba(201,164,92,.06)}
+#rohit-jain-portfolio .heroimg{position:relative;aspect-ratio:4/5;max-height:86vh;width:100%;justify-self:end}
+#rohit-jain-portfolio .heroimg img{object-position:50% 25%;-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 46%,#000 52%,transparent 100%);mask-image:radial-gradient(ellipse 72% 72% at 50% 46%,#000 52%,transparent 100%);filter:contrast(1.05) saturate(.95)}
+#rohit-jain-portfolio .heroimg::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 8%,rgba(224,184,106,.22),transparent 45%);mix-blend-mode:soft-light;pointer-events:none}
+/* grain */
+#rohit-jain-portfolio .grain::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");z-index:0}
+/* strip */
+#rohit-jain-portfolio .strip{padding:0;background:var(--bg2);border-block:1px solid rgba(201,164,92,.25)}
+#rohit-jain-portfolio .strip ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:1280px;margin:0 auto}
+#rohit-jain-portfolio .strip li{padding:36px 20px;text-align:center;border-right:1px solid rgba(201,164,92,.18)}
+#rohit-jain-portfolio .strip li:last-child{border:0}
+#rohit-jain-portfolio .strip b{display:block;font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);color:var(--gold2);line-height:1}
+#rohit-jain-portfolio .strip span{font-size:.85rem;color:var(--mute)}
+/* about */
+#rohit-jain-portfolio .about .in{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px);align-items:start}
+#rohit-jain-portfolio .frame{position:relative;aspect-ratio:3/4;border:1px solid rgba(201,164,92,.4);padding:10px;background:#0a0909}
+#rohit-jain-portfolio .frame img{object-position:50% 30%}
+#rohit-jain-portfolio .frame.b{margin-top:2rem;aspect-ratio:4/3}
+#rohit-jain-portfolio blockquote{margin:1.6rem 0;padding:.2rem 0 .2rem 1.4rem;border-left:2px solid var(--gold);font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,2rem);font-style:italic;color:var(--ivory)!important;line-height:1.3}
+#rohit-jain-portfolio .cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+/* journey */
+#rohit-jain-portfolio .journey{background:linear-gradient(180deg,var(--bg),#130a0c 50%,var(--bg))}
+#rohit-jain-portfolio .roleList li{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,2fr);gap:20px;align-items:baseline;padding:26px 0;border-top:1px solid rgba(201,164,92,.25);transition:padding .3s}
+#rohit-jain-portfolio .roleList li:last-child{border-bottom:1px solid rgba(201,164,92,.25)}
+#rohit-jain-portfolio .roleList li:hover{padding-left:14px}
+#rohit-jain-portfolio .roleList h3{font-size:clamp(1.8rem,4vw,3rem);margin:0}
+#rohit-jain-portfolio .roleList p{margin:0}
+#rohit-jain-portfolio .wide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);margin-top:4rem;align-items:center}
+#rohit-jain-portfolio .wide .frame{aspect-ratio:4/5}
+/* productions */
+#rohit-jain-portfolio .prods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:rgba(201,164,92,.25);border:1px solid rgba(201,164,92,.25);margin-top:2.5rem}
+#rohit-jain-portfolio .prods li{background:var(--bg2);padding:clamp(24px,3vw,40px);min-height:160px;display:flex;align-items:flex-end;position:relative;overflow:hidden;transition:background .4s}
+#rohit-jain-portfolio .prods li::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--wine),var(--gold))}
+#rohit-jain-portfolio .prods li:hover{background:#1b1011}
+#rohit-jain-portfolio .prods h3{font-size:clamp(1.6rem,2.6vw,2.3rem);margin:0;overflow-wrap:anywhere}
+/* tech */
+#rohit-jain-portfolio .tech{background:repeating-linear-gradient(90deg,rgba(201,164,92,.05) 0 1px,transparent 1px 80px),radial-gradient(ellipse 50% 80% at 50% 0,rgba(224,184,106,.18),transparent 70%),#0a0909;overflow:hidden}
+#rohit-jain-portfolio .techg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:2.5rem}
+#rohit-jain-portfolio .techg div{padding:30px;border-top:2px solid var(--gold);background:linear-gradient(180deg,rgba(142,36,48,.2),transparent)}
+#rohit-jain-portfolio .techg h3{font-size:2rem}
+/* education */
+#rohit-jain-portfolio .edu .in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,80px);align-items:center}
+#rohit-jain-portfolio .degree{font-size:clamp(2rem,4.5vw,3.4rem)}
+#rohit-jain-portfolio .facts{margin-top:1.6rem}
+#rohit-jain-portfolio .facts li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(201,164,92,.2)}
+#rohit-jain-portfolio .facts li span:first-child{color:var(--mute)}
+#rohit-jain-portfolio .facts li span:last-child{color:var(--ivory);text-align:right}
+#rohit-jain-portfolio .gold{text-align:center;padding:clamp(36px,5vw,64px) 20px;border:1px solid var(--gold);background:radial-gradient(circle at 50% 0,rgba(201,164,92,.22),transparent 65%),#100d0a;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#rohit-jain-portfolio .gold b{display:block;font-family:var(--serif);font-size:clamp(5rem,14vw,9rem);line-height:.9;color:var(--gold2);font-weight:600}
+#rohit-jain-portfolio .gold span{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);color:var(--ivory)}
+/* awards */
+#rohit-jain-portfolio .awards{background:radial-gradient(ellipse 70% 50% at 50% 0,rgba(142,36,48,.3),transparent 70%),#0b0909}
+#rohit-jain-portfolio .awg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,28px);margin-top:3rem;align-items:start}
+#rohit-jain-portfolio .awg figure{margin:0;position:relative}
+#rohit-jain-portfolio .awg .ph{position:relative;overflow:hidden;aspect-ratio:3/4;border:1px solid rgba(201,164,92,.55);box-shadow:0 24px 60px rgba(0,0,0,.65);background:#000}
+#rohit-jain-portfolio .awg figure:nth-child(2){margin-top:40px}
+#rohit-jain-portfolio .awg img{transition:transform 1.2s ease}
+#rohit-jain-portfolio .awg figure:hover img{transform:scale(1.06)}
+#rohit-jain-portfolio .awg .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,235,190,.22) 50%,transparent 60%);transform:translateX(-120%);transition:transform 1s}
+#rohit-jain-portfolio .awg figure:hover .ph::after{transform:translateX(120%)}
+#rohit-jain-portfolio figcaption{margin-top:14px;font-family:var(--serif);font-size:1.3rem;color:var(--ivory)}
+/* books */
+#rohit-jain-portfolio .bk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px);margin-top:3rem}
+#rohit-jain-portfolio .bk article{display:flex;flex-direction:column;min-width:0}
+#rohit-jain-portfolio .cover{aspect-ratio:3/4;max-width:260px;width:100%;margin:0 0 24px;padding:26px 22px 22px 34px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(135deg,var(--wine2),#1a0a0d 70%);border:1px solid rgba(201,164,92,.5);box-shadow:-10px 14px 30px rgba(0,0,0,.6);position:relative}
+#rohit-jain-portfolio .cover::before{content:"";position:absolute;left:12px;top:0;bottom:0;width:1px;background:rgba(201,164,92,.5)}
+#rohit-jain-portfolio .bk article:nth-child(2) .cover{background:linear-gradient(135deg,#2a2013,#0f0c08 70%)}
+#rohit-jain-portfolio .bk article:nth-child(3) .cover{background:linear-gradient(135deg,#1c1c1c,#090909 70%)}
+#rohit-jain-portfolio .cover small{color:var(--gold2);font-size:.7rem;letter-spacing:.18em}
+#rohit-jain-portfolio .cover strong{font-family:var(--serif);font-size:1.5rem;line-height:1.1;color:var(--ivory)!important}
+#rohit-jain-portfolio .cover i{color:var(--sand);font-size:.8rem;font-style:normal}
+#rohit-jain-portfolio .bk h3{font-size:1.5rem}
+#rohit-jain-portfolio .bk .btn{margin-top:auto;align-self:flex-start}
+/* community */
+#rohit-jain-portfolio .comm .in{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,80px);align-items:center}
+#rohit-jain-portfolio .comm .frame{aspect-ratio:4/5}
+#rohit-jain-portfolio .pills{display:flex;flex-wrap:wrap;gap:10px;margin:1rem 0 1.6rem}
+#rohit-jain-portfolio .pills li{padding:8px 16px;border:1px solid var(--wine);background:rgba(142,36,48,.18);color:var(--ivory);font-size:.9rem}
+/* contact */
+#rohit-jain-portfolio .contact{text-align:center;background:radial-gradient(ellipse 60% 70% at 50% 100%,rgba(201,164,92,.2),transparent 70%),radial-gradient(ellipse 50% 60% at 50% 0,rgba(142,36,48,.3),transparent 70%),#080808}
+#rohit-jain-portfolio .contact .h2{font-size:clamp(2.4rem,7vw,5.6rem)}
+#rohit-jain-portfolio .contact .btns{justify-content:center}
+#rohit-jain-portfolio .contact .ph{margin-top:1.4rem;font-family:var(--serif);font-size:1.6rem}
+#rohit-jain-portfolio .mail{display:none}
+#rohit-jain-portfolio .mail.show{display:block}
+#rohit-jain-portfolio footer{padding:30px 20px;text-align:center;border-top:1px solid rgba(201,164,92,.2);background:#060606;font-size:.85rem;color:var(--mute)}
+#rohit-jain-portfolio footer p{margin:0;color:var(--mute)!important;font-size:.85rem}
+/* reveal */
+#rohit-jain-portfolio .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+#rohit-jain-portfolio .rv.in-v{opacity:1;transform:none}
+@media (max-width:960px){
+#rohit-jain-portfolio .burger{display:block}
+#rohit-jain-portfolio .menu{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#0a0909;border-bottom:1px solid rgba(201,164,92,.3);max-height:0;overflow:hidden;transition:max-height .4s}
+#rohit-jain-portfolio .menu.open{max-height:480px}
+#rohit-jain-portfolio .menu a{padding:16px 24px;border-top:1px solid rgba(201,164,92,.12)}
+#rohit-jain-portfolio .hero .in,#rohit-jain-portfolio .about .in,#rohit-jain-portfolio .wide,#rohit-jain-portfolio .edu .in,#rohit-jain-portfolio .comm .in{grid-template-columns:minmax(0,1fr)}
+#rohit-jain-portfolio .heroimg{order:-1;max-width:420px;justify-self:center;aspect-ratio:1/1.15}
+#rohit-jain-portfolio .hero{min-height:0}
+#rohit-jain-portfolio .strip ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+#rohit-jain-portfolio .strip li:nth-child(2){border-right:0}
+#rohit-jain-portfolio .strip li:nth-child(-n+2){border-bottom:1px solid rgba(201,164,92,.18)}
+#rohit-jain-portfolio .prods,#rohit-jain-portfolio .techg{grid-template-columns:repeat(2,minmax(0,1fr))}
+#rohit-jain-portfolio .bk{grid-template-columns:minmax(0,1fr)}
+#rohit-jain-portfolio .about .frame:not(.b){max-width:420px}
+}
+@media (max-width:700px){
+#rohit-jain-portfolio .awg{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+#rohit-jain-portfolio .awg figure{flex:0 0 82%;scroll-snap-align:center;margin-top:0!important}
+#rohit-jain-portfolio .cols{grid-template-columns:minmax(0,1fr)}
+#rohit-jain-portfolio .roleList li{grid-template-columns:minmax(0,1fr);gap:6px}
+#rohit-jain-portfolio .prods,#rohit-jain-portfolio .techg{grid-template-columns:minmax(0,1fr)}
+#rohit-jain-portfolio .btn{width:100%}
+#rohit-jain-portfolio .hero h1 span+span{padding-left:.15em}
+}
+@media (prefers-reduced-motion:reduce){
+#rohit-jain-portfolio *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+#rohit-jain-portfolio .rv{opacity:1;transform:none}
+}
+
+/* Updated credentials, activity cards and uncropped image layouts */
+#rohit-jain-portfolio .hero .credentials{font-family:var(--serif);font-size:clamp(.95rem,2.1vw,1.65rem);font-style:italic;font-weight:600;letter-spacing:.015em;line-height:1.4;white-space:nowrap;color:var(--gold2)!important;-webkit-text-fill-color:currentColor;margin:0 0 1.4rem}
+#rohit-jain-portfolio .heroimg img{object-fit:contain;object-position:center;-webkit-mask-image:none;mask-image:none}
+#rohit-jain-portfolio .about .frame img,#rohit-jain-portfolio .comm .frame img,#rohit-jain-portfolio .in-moments .frame img{object-fit:contain;object-position:center!important}
+#rohit-jain-portfolio .prods li{flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:12px;min-height:240px}
+#rohit-jain-portfolio .prods .work-stat{font-family:var(--serif);font-size:clamp(3rem,5vw,4.3rem);font-weight:600;line-height:1;color:var(--gold2)}
+#rohit-jain-portfolio .prods .work-kicker{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:8px 0}
+#rohit-jain-portfolio .prods p{font-size:.9rem;line-height:1.65;margin:0}
+#rohit-jain-portfolio .awg .ph{aspect-ratio:16/9}
+#rohit-jain-portfolio .awg figure:nth-child(2){margin-top:0}
+#rohit-jain-portfolio .awg img{object-fit:contain;object-position:center!important}
+#rohit-jain-portfolio .awg figure:hover img{transform:none}
+#rohit-jain-portfolio .cover{padding:10px;max-width:300px;aspect-ratio:3/4;display:block;overflow:hidden}
+#rohit-jain-portfolio .cover::before{display:none}
+#rohit-jain-portfolio .cover img{object-fit:contain;object-position:center}
+#rohit-jain-portfolio .comm .frame{aspect-ratio:4/3}
+#rohit-jain-portfolio .in-moments .frame.b{aspect-ratio:3/4;max-width:420px;width:100%;justify-self:center}
+#rohit-jain-portfolio .contact .mail{margin-top:1.5rem;overflow-wrap:anywhere}
+@media(max-width:700px){
+#rohit-jain-portfolio .awg{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible;scroll-snap-type:none;gap:28px;padding-bottom:0}
+#rohit-jain-portfolio .in-moments .in{grid-template-columns:minmax(0,1fr)!important}
+}
+@media(max-width:360px){#rohit-jain-portfolio .hero .credentials{font-size:clamp(.7rem,4vw,.95rem);letter-spacing:0}}
+
+/* Image-led frames: natural proportions with a close-fitting gold border. */
+#rohit-jain-portfolio .comm .frame,#rohit-jain-portfolio .in-moments .frame.b{aspect-ratio:auto;padding:0;height:auto;min-height:0;border:1px solid var(--gold);overflow:hidden;align-self:center}
+#rohit-jain-portfolio .comm .frame img,#rohit-jain-portfolio .in-moments .frame img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center!important}
+
+/* Soft lower-edge vignette blends the portrait into the hero background. */
+#rohit-jain-portfolio .heroimg img{
+ object-fit:contain;object-position:center;
+ -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.85) 81%,rgba(0,0,0,.4) 91%,transparent 100%);
+ mask-image:linear-gradient(to bottom,#000 0%,#000 72%,rgba(0,0,0,.85) 81%,rgba(0,0,0,.4) 91%,transparent 100%);
+ -webkit-mask-size:100% 100%;mask-size:100% 100%;
+ -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+ height:auto;max-height:86vh;
+}
+#rohit-jain-portfolio .heroimg{aspect-ratio:auto;display:flex;align-items:center;justify-content:center}
+</style>
+
+<div id="rohit-jain-portfolio">
+<header class="nav" id="rjp-top">
+<a class="brand" href="#home" aria-label="Rohit Jain, home">ROHIT JAIN</a>
+<button class="burger" aria-expanded="false" aria-controls="rjp-menu" aria-label="Open menu"><span></span></button>
+<nav aria-label="Main navigation"><div class="menu" id="rjp-menu">
+<a href="#home">Home</a><a href="#about">About</a><a href="#journey">Journey</a><a href="#productions">Productions</a><a href="#awards">Awards</a><a href="#books">Books</a><a href="#contact">Contact</a>
+</div></nav>
+</header>
+<main>
+<section class="hero grain" id="home"><div class="in">
+<div style="position:relative;z-index:1;min-width:0">
+<h1><span>ROHIT</span><span>JAIN</span></h1>
+<p class="credentials">(Gold Medalist, UGC-NET Qualified)</p>
+<p class="roles">Author • Actor • Director • Singer • Theatre Educator</p>
+<p class="tag">Creating stories. Shaping performers. Living theatre.</p>
+<ul class="chips"><li>9+ Years in Arts &amp; Theatre</li><li>MPA Topper</li><li>3 Gold Medals</li><li>UGC-NET Qualified</li><li>Valedictorian</li></ul>
+<div class="btns"><a class="btn p" href="#journey" aria-label="Explore Rohit Jain's journey">Explore My Journey</a><a class="btn s" href="https://www.instagram.com/rohit___3/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Follow Rohit Jain on Instagram">Instagram</a></div>
+</div>
+<div class="heroimg"><img src="https://encyclohub.com/wp-content/uploads/2026/10/Confident-Monochrome-Kurta-Portrait.png" alt="Confident monochrome kurta portrait of Rohit Jain" fetchpriority="high" loading="eager"></div>
+</div></section>
+
+<section class="strip" aria-label="Credentials"><ul>
+<li class="rv"><b>9+</b><span>Years in Arts &amp; Theatre</span></li>
+<li class="rv"><b>3×</b><span>Gold Medal</span></li>
+<li class="rv"><b>UGC-NET</b><span>Qualified</span></li>
+<li class="rv"><b>2017</b><span>Teaching journey begins</span></li>
+</ul></section>
+
+<section class="about" id="about"><div class="in">
+<div><div class="frame rv"><img src="https://encyclohub.com/wp-content/uploads/2026/10/remove.photos-removed-background.png" alt="Portrait of Rohit Jain, theatre artist and educator" loading="lazy"></div></div>
+<div class="rv">
+<span class="lbl">The Artist</span><h2 class="h2">A life given to the stage.</h2><div class="rule"></div>
+<p>Rohit Jain is a dedicated and versatile theatre artist, educator, director and singer who has contributed to the performing arts for years.</p>
+<blockquote>Teaching, directing and performing are one continuous act of storytelling.</blockquote>
+<div class="cols">
+<p>Since 2017, he has taught drama at the Artists Combine Institute of Performing Arts, nurturing the creative and technical growth of emerging talent.</p>
+<p>In 2022, he earned his Master of Performing Arts (MPA) from Raja Mansingh Tomar Music and Arts University, Gwalior, securing first position in his class and three Gold Medals for academic and artistic excellence.</p>
+<p>He has qualified the UGC-NET (National Eligibility Test), reflecting his subject expertise and commitment to arts education.</p>
+<p>He has also compiled and edited books for UGC-NET Performing Arts / Theatre examination preparation.</p>
+</div></div>
+</div></section>
+
+<section class="journey" id="journey"><div class="in">
+<div class="rv"><span class="lbl">Artistic Journey</span><h2 class="h2">Many roles, one stage.</h2><div class="rule"></div></div>
+<ul class="roleList">
+<li class="rv"><h3>Actor</h3><p>Performing in notable plays across his theatrical journey.</p></li>
+<li class="rv"><h3>Director</h3><p>Shaping productions from the first idea to the final curtain.</p></li>
+<li class="rv"><h3>Singer</h3><p>Bringing music and voice into his performing practice.</p></li>
+<li class="rv"><h3>Teacher</h3><p>Teaching drama since 2017 at the Artists Combine Institute of Performing Arts.</p></li>
+<li class="rv"><h3>Theatre Practitioner</h3><p>Working beyond performance in direction, acting, drama education, light design, sound design and set design.</p></li>
+</ul>
+<div class="wide">
+<div class="frame rv"><img src="https://encyclohub.com/wp-content/uploads/2026/10/622453354_18058982066661221_5506415201328265499_n.jpg" alt="Reflective side-profile portrait of Rohit Jain" loading="lazy" style="object-position:50% 20%"></div>
+<div class="rv"><span class="lbl">Reflection</span><h3 style="font-size:clamp(2rem,4vw,3.2rem)">The craft is quiet before it is loud.</h3><p>Behind every performance sits patient work: reading a text, building a voice, setting a light, guiding a student toward confidence. Rohit's practice holds all of it together.</p></div>
+</div>
+</div></section>
+
+<section id="productions"><div class="in">
+<div class="rv"><span class="lbl">Theatre &amp; Creative Practice</span><h2 class="h2">Notable works from the stage.</h2><div class="rule"></div>
+<p style="max-width:60ch">From directing productions to mentoring new performers, Rohit brings together stagecraft, teaching and creative collaboration.</p></div>
+<ul class="prods">
+<li class="rv"><span class="work-stat">20+</span><h3>Drama &amp; Theatre Directions</h3><p>Directing stage productions and bringing stories to life.</p></li>
+<li class="rv"><span class="work-stat">25+</span><h3>Theatre Workshops</h3><p>Guiding performers through acting, voice and stage practice.</p></li>
+<li class="rv"><span class="work-kicker">Behind the curtain</span><h3>Backstage Direction</h3><p>Coordinating rehearsals, stage movement and production work.</p></li>
+<li class="rv"><span class="work-kicker">Teaching the craft</span><h3>Drama &amp; Arts Education</h3><p>Nurturing confidence, creativity and expression through theatre.</p></li>
+<li class="rv"><span class="work-kicker">Building the stage</span><h3>Creative Stagecraft</h3><p>Bringing together light, sound and set design for performance.</p></li>
+<li class="rv"><span class="work-kicker">Connecting with people</span><h3>Community Theatre</h3><p>Workshops, theatre camps and street theatre that engage audiences.</p></li>
+</ul></div></section>
+
+<section class="tech" id="technical"><div class="in">
+<div class="rv"><span class="lbl">Behind the Stage</span><h2 class="h2">Theatre is built in the dark, too.</h2><div class="rule"></div></div>
+<div class="techg"><div class="rv"><h3>Light Design</h3><p>Shaping mood and focus with light.</p></div><div class="rv"><h3>Sound Design</h3><p>Giving every scene its sound.</p></div><div class="rv"><h3>Set Design</h3><p>Building the world the story lives in.</p></div></div>
+</div></section>
+
+<section class="edu" id="education"><div class="in">
+<div class="rv"><span class="lbl">Education &amp; Academic Excellence</span>
+<h2 class="degree">Master of Performing Arts (MPA)</h2><div class="rule"></div>
+<p>Raja Mansingh Tomar Music and Arts University, Gwalior</p>
+<ul class="facts"><li><span>Year</span><span>2022</span></li><li><span>Class rank</span><span>First position</span></li><li><span>Recognition</span><span>Three Gold Medals</span></li><li><span>Qualification</span><span>UGC-NET Qualified</span></li><li><span>Distinction</span><span>Valedictorian</span></li></ul></div>
+<div class="gold rv"><b>3</b><span>Gold Medals</span><p style="margin:.6rem 0 0">Academic and artistic excellence</p></div>
+</div></section>
+
+<section class="awards" id="awards"><div class="in">
+<div class="rv" style="text-align:center"><span class="lbl">Awards &amp; Recognition</span><h2 class="h2">Honours &amp; milestones.</h2>
+<p style="max-width:62ch;margin:0 auto">A career of achievement, mentorship and artistic milestones, recognised along the way. Explore the moments below.</p></div>
+<div class="awg">
+<figure class="rv"><div class="ph"><img src="https://encyclohub.com/wp-content/uploads/2026/10/award1.jpg" alt="Rohit Jain at an artistic recognition event" loading="lazy" style="object-position:50% 25%"></div></figure>
+<figure class="rv"><div class="ph"><img src="https://encyclohub.com/wp-content/uploads/2026/10/award2.webp" alt="Rohit Jain at a presentation moment" loading="lazy" style="object-position:50% 25%"></div></figure>
+<figure class="rv"><div class="ph"><img src="https://encyclohub.com/wp-content/uploads/2026/10/award3.jpg" alt="Rohit Jain at a workshop or honour ceremony" loading="lazy" style="object-position:50% 25%"></div></figure>
+<figure class="rv"><div class="ph"><img src="https://encyclohub.com/wp-content/uploads/2026/10/honors-milestone-4.webp" alt="Rohit Jain — honours and milestones, moment 4" loading="lazy"></div></figure>
+<figure class="rv"><div class="ph"><img src="https://encyclohub.com/wp-content/uploads/2026/10/honors-milestone-5.webp" alt="Rohit Jain — honours and milestones, moment 5" loading="lazy"></div></figure>
+<figure class="rv"><div class="ph"><img src="https://encyclohub.com/wp-content/uploads/2026/10/honors-milestone-6.webp" alt="Rohit Jain — honours and milestones, moment 6" loading="lazy"></div></figure>
+</div></div></section>
+
+<section id="books"><div class="in">
+<div class="rv"><span class="lbl">Author &amp; Academic Contributions</span><h2 class="h2">Beyond the Stage: Author &amp; Educator</h2><div class="rule"></div>
+<p style="max-width:62ch">Rohit has compiled and edited books for UGC-NET Performing Arts / Theatre examination preparation.</p></div>
+<div class="bk">
+<article class="rv"><div class="cover"><img src="https://encyclohub.com/wp-content/uploads/2026/10/PYQ-front-mockup.png" alt="Performing Arts / Theatre Previous Questions 2016–2025" loading="lazy"></div><h3>Performing Arts / Theatre Previous Questions 2016–2025</h3><p>Exam preparation for UGC-NET.</p><a class="btn p" href="https://www.amazon.in/Performing-Theatre-Previous-Questions-2016-2025/dp/9359122629/ref=sr_1_8?dib=eyJ2IjoiMSJ9.q2sqxWZbr3fa-Ue08dM6HvsIRoQzHqb7BknMELG_PPLSIF9_9yzOE-qxAHnsR5an9ux9-0nvKQp4S6Hm765naFAWI-ZyNlHaVAmhKfjY9JxJLCLeF5weqDDO3iFROOIooj7stM9hNVmryImGaGKM2yAmQuJrPbM_bYUNYXUdOkMeKkMfWNPFQTb3Anqu7oOYikFyOb3XkFRBd6W2587F58HFicpkVuUEUV_zlk0FRX8.Kw0IRlG1519zbBfdzBZxsQE8itp1c7JXWNYejbx9GBE&dib_tag=se&keywords=performing+arts+ugc+net&qid=1791369837&sr=8-8" target="_blank" rel="noopener noreferrer">View on Amazon</a></article>
+<article class="rv"><div class="cover"><img src="https://encyclohub.com/wp-content/uploads/2026/10/front-cover-eng-pqb.png" alt="Performing Arts / Theatre Practice Questions — English Edition" loading="lazy"></div><h3>Performing Arts / Theatre Practice Questions — English Edition</h3><p>Practice questions for UGC-NET preparation — English Edition.</p><a class="btn p" href="https://www.amazon.in/Performing-Theatre-Practice-Questions-Syllabus/dp/9359163392/ref=sr_1_11?dib=eyJ2IjoiMSJ9.q2sqxWZbr3fa-Ue08dM6HvsIRoQzHqb7BknMELG_PPLSIF9_9yzOE-qxAHnsR5an9ux9-0nvKQp4S6Hm765naFAWI-ZyNlHaVAmhKfjY9JxJLCLeF5weqDDO3iFROOIooj7stM9hNVmryImGaGKM2yAmQuJrPbM_bYUNYXUdOkMeKkMfWNPFQTb3Anqu7oOYikFyOb3XkFRBd6W2587F58HFicpkVuUEUV_zlk0FRX8.Kw0IRlG1519zbBfdzBZxsQE8itp1c7JXWNYejbx9GBE&dib_tag=se&keywords=performing+arts+ugc+net&qid=1791369837&sr=8-11" target="_blank" rel="noopener noreferrer">View on Amazon</a></article>
+<article class="rv"><div class="cover"><img src="https://encyclohub.com/wp-content/uploads/2026/10/main-cover.png" alt="Performing Arts / Theatre Practice Questions — Hindi Edition" loading="lazy"></div><h3>Performing Arts / Theatre Practice Questions — Hindi Edition</h3><p>Practice questions for UGC-NET preparation — Hindi Edition.</p><a class="btn p" href="https://www.amazon.in/Performing-Theatre-Practice-Question-Chapter/dp/9359176575/ref=sr_1_12?dib=eyJ2IjoiMSJ9.q2sqxWZbr3fa-Ue08dM6HvsIRoQzHqb7BknMELG_PPLSIF9_9yzOE-qxAHnsR5an9ux9-0nvKQp4S6Hm765naFAWI-ZyNlHaVAmhKfjY9JxJLCLeF5weqDDO3iFROOIooj7stM9hNVmryImGaGKM2yAmQuJrPbM_bYUNYXUdOkMeKkMfWNPFQTb3Anqu7oOYikFyOb3XkFRBd6W2587F58HFicpkVuUEUV_zlk0FRX8.Kw0IRlG1519zbBfdzBZxsQE8itp1c7JXWNYejbx9GBE&dib_tag=se&keywords=performing+arts+ugc+net&qid=1791369837&sr=8-12" target="_blank" rel="noopener noreferrer">View on Amazon</a></article>
+</div></div></section>
+
+<section class="comm" id="community"><div class="in">
+<div class="rv"><span class="lbl">Workshops &amp; Community</span><h2 class="h2">Theatre that reaches people.</h2><div class="rule"></div>
+<p>Rohit has conducted workshops, seminars, theatre camps and drama education activities across different cities.</p>
+<ul class="pills"><li>Workshops</li><li>Seminars</li><li>Theatre Camps</li><li>Drama Education</li></ul>
+<p>He is also engaged with <strong>Nukkad Natak / street theatre</strong>, using performance to raise awareness of important social issues.</p></div>
+<div class="frame rv"><img src="https://encyclohub.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-07-at-4.42.11-PM.jpeg" alt="Rohit Jain at a cultural event" loading="lazy" style="object-position:50% 25%"></div>
+</div></section>
+
+<section class="in-moments" style="padding-top:0"><div class="in" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center">
+<div class="rv"><span class="lbl">Off Stage</span><h2 class="h2" style="font-size:clamp(2rem,4.5vw,3.4rem)">The person behind the performer.</h2><div class="rule"></div><p>Beyond the spotlight, there is space to pause, reflect and find inspiration in everyday life. These quieter moments bring a personal touch to a journey shaped by stories, music and a love for the stage.</p></div>
+<div class="frame b rv" style="margin:0"><img src="https://encyclohub.com/wp-content/uploads/2026/10/487604720_18474917884066883_4686250975860091570_n.webp" alt="Rohit Jain in black clothing and sunglasses outdoors" loading="lazy" style="object-position:50% 30%"></div>
+</div></section>
+
+<section class="contact grain" id="contact" data-email="amrohit27@gmail.com"><div class="in" style="position:relative;z-index:1" id="rjp-contact">
+<span class="lbl">Contact</span><h2 class="h2">Let's create something worth remembering.</h2>
+<p style="max-width:56ch;margin:0 auto">For workshops, productions, collaborations and teaching, reach out directly.</p>
+<div class="btns"><a class="btn p" href="https://www.instagram.com/rohit___3/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Follow Rohit Jain on Instagram">Connect on Instagram</a><a class="btn s" href="https://wa.me/919893143279" target="_blank" rel="noopener noreferrer" aria-label="Connect with Rohit Jain on WhatsApp">Connect on WhatsApp</a></div>
+<p class="mail show"><a id="rjp-mail" href="mailto:amrohit27@gmail.com">amrohit27@gmail.com</a></p>
+</div></section>
+</main>
+<footer><p>© <span id="rjp-year">2026</span> Rohit Jain. Author • Actor • Director • Singer • Theatre Educator</p></footer>
+</div>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Rohit Jain","jobTitle":"Author, Actor, Director, Singer and Theatre Educator","email":"amrohit27@gmail.com","sameAs":["https://www.instagram.com/rohit___3/?hl=en"],"telephone":"+919893143279","alumniOf":"Raja Mansingh Tomar Music and Arts University, Gwalior"}</script>
+<script>
+(function(){
+function init(){
+var root=document.getElementById('rohit-jain-portfolio');if(!root)return;
+try{var el=root.parentElement,n=0;while(el&&el!==document.documentElement&&n<12){if(el!==document.body){el.classList.add('rjp-fullwidth-host');}else break;el=el.parentElement;n++;}}catch(e){}
+var b=root.querySelector('.burger'),m=root.querySelector('.menu');
+function close(){m.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');}
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');});
+var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var links=root.querySelectorAll('.menu a, a[href^="#"]');
+links.forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=root.querySelector(id);if(!t)return;e.preventDefault();close();t.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});});});
+var rv=root.querySelectorAll('.rv');
+if('IntersectionObserver' in window&&!rm){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in-v');io.unobserve(x.target);}});},{threshold:.12});rv.forEach(function(r){io.observe(r);});}
+else rv.forEach(function(r){r.classList.add('in-v');});
+var secs=root.querySelectorAll('main section[id]'),mls=root.querySelectorAll('.menu a');
+if('IntersectionObserver' in window){var so=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){mls.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(function(s){so.observe(s);});}
+var c=root.querySelector('#contact'),em=c&&c.getAttribute('data-email');
+if(em){var a=root.querySelector('#rjp-mail');a.href='mailto:'+em;a.textContent=em;a.parentElement.classList.add('show');}
+var y=root.querySelector('#rjp-year');if(y)y.textContent=new Date().getFullYear();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
